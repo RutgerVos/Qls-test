@@ -1,4 +1,5 @@
-<div>
+{{ csrf_field() }}
+{{-- <div>
     Page 1
 </div>
 
@@ -6,4 +7,5 @@
 
 <div>
     Page 2
-</div>
+</div> --}}
+<h1>test</h1>

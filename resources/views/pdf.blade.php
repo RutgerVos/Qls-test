@@ -1,13 +1,4 @@
 {{ csrf_field() }}
-{{-- <div>
-    Page 1
-</div>
-
-@pageBreak
-
-<div>
-    Page 2
-</div> --}}
 <p>id = {{ $response['id'] }}</p>
 <p>company_id = {{ $response['company_id'] }}</p>
 <a>name = {{ $response['name'] }}</a>
@@ -30,3 +21,29 @@
 <p>return_action_default = {{ $response['return_action_default'] }}</p>
 <p>with_return_label = {{ $response['with_return_label'] }}</p>
 <p>created_at = {{ $response['created'] }}</p>
+<p>company_name = {{ $response['company']["name"] }}</p>
+
+@pageBreak
+
+<div>
+    <p>sender_contact_company_name = {{ $response['sender_contact']["companyname"] }}</p>
+    <p>sender_contact_company_email = {{ $response['sender_contact']["email"] }}</p>
+    <p>sender_contact_name = {{ $response['sender_contact']["name"] }}</p>
+    <p>sender_contact_street = {{ $response['sender_contact']["street"] }}</p>
+    <p>sender_contact_housenumber = {{ $response['sender_contact']["housenumber"] }}</p>
+    <p>sender_contact_postalcode = {{ $response['sender_contact']["postalcode"] }}</p>
+    <p>sender_contact_locality = {{ $response['sender_contact']["locality"] }}</p>
+    <p>sender_contact_country = {{ $response['sender_contact']["country"] }}</p>
+</div>
+
+@pageBreak
+
+<div>
+    <p>street = {{ $response['return_contact']["street"] }}</p>
+    <p>return_contact_website = <a href="www.{{ $response['return_contact']["companyname"] }}">{{ $response['return_contact']["companyname"] }}</a></p>
+    <p>street = {{ $response['return_contact']["street"] }}</p>
+    <p>housenumber = {{ $response['return_contact']["housenumber"] }}</p>
+    <p>postalcode = {{ $response['return_contact']["street"] }}</p>
+    <p>locality = {{ $response['return_contact']["locality"] }}</p>
+    <p>country = {{ $response['return_contact']["country"] }}</p>
+</div>

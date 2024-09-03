@@ -1,4 +1,5 @@
 {{ csrf_field() }}
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <p>id = {{ $response['id'] }}</p>
 <p>company_id = {{ $response['company_id'] }}</p>
 <a>name = {{ $response['name'] }}</a>
@@ -46,4 +47,6 @@
     <p>postalcode = {{ $response['return_contact']["street"] }}</p>
     <p>locality = {{ $response['return_contact']["locality"] }}</p>
     <p>country = {{ $response['return_contact']["country"] }}</p>
+    <p>tracking_url = {{ $shipment["tracking_url"] }}</p>
+    <div class="mb-3">{!! DNS1D::getBarcodeHTML($barcode, 'CODABAR') !!}</div>
 </div>

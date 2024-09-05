@@ -41,12 +41,21 @@
 
 <div>
     <p>street = {{ $response['return_contact']["street"] }}</p>
-    <p>return_contact_website = <a href="www.{{ $response['return_contact']["companyname"] }}">{{ $response['return_contact']["companyname"] }}</a></p>
+    <p>return_contact_website = <a
+            href="www.{{ $response['return_contact']["companyname"] }}">{{ $response['return_contact']["companyname"] }}</a>
+    </p>
     <p>street = {{ $response['return_contact']["street"] }}</p>
     <p>housenumber = {{ $response['return_contact']["housenumber"] }}</p>
     <p>postalcode = {{ $response['return_contact']["street"] }}</p>
     <p>locality = {{ $response['return_contact']["locality"] }}</p>
     <p>country = {{ $response['return_contact']["country"] }}</p>
     <p>tracking_url = {{ $shipment["tracking_url"] }}</p>
+    @if($delivery == 2)
+    <p>delivery_id = {{ $delivery }}</p>
+    <p>delivery_method = DHL Pakje</p>
+    @else
+    <p>delivery_id = {{ $delivery }}</p>
+    <p>delivery_method = DHL Brievenbuspakje</p>
+    @endif
     <div class="mb-3">{!! DNS1D::getBarcodeHTML($barcode, 'CODABAR') !!}</div>
 </div>

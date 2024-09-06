@@ -42,7 +42,7 @@
 <div>
     <p>street = {{ $response['return_contact']["street"] }}</p>
     <p>return_contact_website = <a
-            href="www.{{ $response['return_contact']["companyname"] }}">{{ $response['return_contact']["companyname"] }}</a>
+            href="https://www.{{ $response['return_contact']["companyname"] }}">{{ $response['return_contact']["companyname"] }}</a>
     </p>
     <p>street = {{ $response['return_contact']["street"] }}</p>
     <p>housenumber = {{ $response['return_contact']["housenumber"] }}</p>

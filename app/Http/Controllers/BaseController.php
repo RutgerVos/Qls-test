@@ -35,7 +35,7 @@ class BaseController extends Controller
         $shipment_id = $shipment['data'][0]['id'];
         $shipment_returns = Http::withBasicAuth('frits@test.qlsnet.nl', '4QJW9yh94PbTcpJGdKz6egwH')
         ->get('https://api.pakketdienstqls.nl/companies/9e606e6b-44a4-4a4e-a309-cc70ddd3a103/shipments/'. $shipment_id .'/returns');
-     Pdf::view('pdf', ['response' => $response['data'] , 'barcode' => boolval($shipment['data'][0]["barcode"]), "shipment" => $shipment["data"][0], "deliver" => $delivery])
+     Pdf::view('pdf', ['response' => $response['data'] , 'barcode' => boolval($shipment['data'][0]["barcode"]), "shipment" => $shipment["data"][0], "delivery" => $delivery])
     ->format('a4')
     ->save('test.pdf');
     $file = public_path(). "/test.pdf";

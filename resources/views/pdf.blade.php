@@ -32,7 +32,7 @@
     <p>sender_contact_name = {{ $response['sender_contact']["name"] }}</p>
     <p>sender_contact_street = {{ $response['sender_contact']["street"] }}</p>
     <p>sender_contact_housenumber = {{ $response['sender_contact']["housenumber"] }}</p>
-    <p>sender_contact_postalcode = {{ $response['sender_contact']["postalcode"] }}</p>
+    <p>sender_contact_postalcode/zipcode = {{ $response['sender_contact']["postalcode"] }}</p>
     <p>sender_contact_locality = {{ $response['sender_contact']["locality"] }}</p>
     <p>sender_contact_country = {{ $response['sender_contact']["country"] }}</p>
 </div>
@@ -46,7 +46,8 @@
     </p>
     <p>street = {{ $response['return_contact']["street"] }}</p>
     <p>housenumber = {{ $response['return_contact']["housenumber"] }}</p>
-    <p>postalcode = {{ $response['return_contact']["street"] }}</p>
+    <p>postalcode/zipcode = {{ $response['return_contact']["street"] }}</p>
+    <p>city = {{ $response['return_contact']["city"] }}</p>
     <p>locality = {{ $response['return_contact']["locality"] }}</p>
     <p>country = {{ $response['return_contact']["country"] }}</p>
     <p>tracking_url = {{ $shipment["tracking_url"] }}</p>

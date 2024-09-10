@@ -24,7 +24,7 @@
 <p>created_at = {{ $response['created'] }}</p>
 <p>company_name = {{ $response['company']["name"] }}</p>
 
-@pageBreak
+{{-- @pageBreak --}}
 
 <div>
     <p>sender_contact_company_name = {{ $response['sender_contact']["companyname"] }}</p>
@@ -37,7 +37,7 @@
     <p>sender_contact_country = {{ $response['sender_contact']["country"] }}</p>
 </div>
 
-@pageBreak
+{{-- @pageBreak --}}
 
 <div>
     <p>street = {{ $response['return_contact']["street"] }}</p>
@@ -47,10 +47,10 @@
     <p>street = {{ $response['return_contact']["street"] }}</p>
     <p>housenumber = {{ $response['return_contact']["housenumber"] }}</p>
     <p>postalcode/zipcode = {{ $response['return_contact']["street"] }}</p>
-    <p>city = {{ $response['return_contact']["city"] }}</p>
     <p>locality = {{ $response['return_contact']["locality"] }}</p>
     <p>country = {{ $response['return_contact']["country"] }}</p>
     <p>tracking_url = {{ $shipment["tracking_url"] }}</p>
+    <p>product_name = {{ $shipment["product"]['name'] }}</p>
     @if($delivery == 2)
     <p>delivery_id = {{ $delivery }}</p>
     <p>delivery_method = DHL Pakje</p>

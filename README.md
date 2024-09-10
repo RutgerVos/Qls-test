@@ -1,3 +1,4 @@
+GETTING STARTED:
 1.Open folder in you're code editor terminal and run: php artisan serve.
 2.Go to localhost: http://127.0.0.1:8000/
 3.Choose delivery method.

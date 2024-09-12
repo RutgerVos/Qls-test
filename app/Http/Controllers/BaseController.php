@@ -14,12 +14,7 @@ class BaseController extends Controller
     public function index()
     {
         $client = new \GuzzleHttp\Client(['verify' => false]);
-        $response = Http::withBasicAuth('frits@test.qlsnet.nl', '4QJW9yh94PbTcpJGdKz6egwH')
-            ->get('https://api.pakketdienstqls.nl/companies/9e606e6b-44a4-4a4e-a309-cc70ddd3a103/brands/e41c8d26-bdfd-4999-9086-e5939d67ae28');
-        $shipment = Http::withBasicAuth('frits@test.qlsnet.nl', '4QJW9yh94PbTcpJGdKz6egwH')
-            ->get('https://api.pakketdienstqls.nl/companies/9e606e6b-44a4-4a4e-a309-cc70ddd3a103/shipments');
-        var_dump($shipment['data'][0]);
-        return view('welcome', ['response' => $response['data']]);
+        return view('welcome');
     }
 
     public function pdf(Request $request)

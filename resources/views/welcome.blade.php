@@ -1,4 +1,4 @@
-<h1>Click button for pdf order</h1>
+<h1>Select delivery method and click button for pdf order</h1>
 {{-- <a href="{{ route('pdf') }}">Create pdf</a> --}}
 <form action="{{ route('pdf') }}" method="post">
     {{ csrf_field() }}
